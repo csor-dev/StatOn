@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "incidents",
+  "info": {
+    "singularName": "incident",
+    "pluralName": "incidents",
+    "displayName": "Incident",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "issue_name": {
+      "type": "string",
+      "required": true
+    },
+    "issue_start": {
+      "type": "datetime",
+      "required": true
+    },
+    "issue_end": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "resolved",
+        "investigating",
+        "identified"
+      ],
+      "required": true,
+      "default": "investigating"
+    },
+    "incident_effect": {
+      "type": "enumeration",
+      "enum": [
+        "down",
+        "latency"
+      ],
+      "required": true,
+      "default": "latency"
+    },
+    "incident_description": {
+      "type": "text"
+    }
+  }
+}
